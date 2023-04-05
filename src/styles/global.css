@@ -1,0 +1,8 @@
+:root {
+  --primary-bg-color: #0fb8a4;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "SUIT", sans-serif;
+}
