@@ -5,21 +5,14 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { Spacing } from "@toss/emotion-utils";
 import colors from "material-colors";
+import FirstSection from "./Section/FirstSection";
+import SecondSection from "./Section/SecondSection";
 
-export default function Home() {
+export default function Main() {
   return (
     <Container>
-      <Title>오늘의 칭찬</Title>
-      <Spacing size={8} />
-      <div
-        css={css`
-          font-size: 0.875rem;
-          color: ${colors.grey[600]};
-        `}
-      >
-        아직 칭찬을 하지 않았어요.
-      </div>
-      <Spacing size={12} />
+      <FirstSection />
+      <SecondSection />
       <Button
         css={css`
           margin-top: auto;
@@ -36,3 +29,5 @@ const Title = styled(motion.div)`
   font-size: 1.25rem;
   font-weight: 700;
 `;
+
+Main.requireAuth = true;

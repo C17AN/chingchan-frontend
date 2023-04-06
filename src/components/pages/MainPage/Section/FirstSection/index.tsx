@@ -1,21 +1,25 @@
 import Button from "@/components/common/Button";
-import Container from "@/components/common/Container";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
+import { Spacing } from "@toss/emotion-utils";
+import colors from "material-colors";
 
 export default function Home() {
   return (
-    <Container>
+    <>
       <Title>오늘의 칭찬</Title>
-      <Button
+      <Spacing size={8} />
+      <div
         css={css`
-          width: 100%;
+          font-size: 0.875rem;
+          color: ${colors.grey[600]};
         `}
       >
-        참 잘했어요!
-      </Button>
-    </Container>
+        아직 칭찬을 하지 않았어요.
+      </div>
+      <Spacing size={12} />
+    </>
   );
 }
 
