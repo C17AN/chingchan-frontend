@@ -17,7 +17,8 @@ const Container = styled.div`
   bottom: 0;
   width: 100%;
   padding: 16px;
-  height: 96px;
+  height: 60px;
+  border-top: 1px solid ${colors.grey[300]};
 `;
 
 const Navbar = styled.nav`
@@ -25,7 +26,6 @@ const Navbar = styled.nav`
   height: 100%;
   border-radius: 8px;
   filter: drop-shadow(0px 0px 8px ${colors.teal[500] + "25"});
-  background: ${colors.teal[500]};
 `;
 
 export default BottomNavbar;

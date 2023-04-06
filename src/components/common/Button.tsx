@@ -30,7 +30,7 @@ const Button = ({ children, onClick, ...props }: Props) => {
 };
 
 const StyledButton = styled(motion.button)`
-  background-color: var(--primary-bg-color);
+  background-color: ${colors.blue[200]};
   border-radius: 8px;
   padding: 12px 24px;
   font-size: 1rem;

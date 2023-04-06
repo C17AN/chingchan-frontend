@@ -35,7 +35,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.7":
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.14.8", "@babel/runtime@^7.18.3", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.7":
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.21.0.tgz#5b55c9d394e5fcf304909a8b00c07dc217b56673"
   integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
@@ -348,10 +348,32 @@
   dependencies:
     tslib "^2.4.0"
 
+"@toss/emotion-utils@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@toss/emotion-utils/-/emotion-utils-1.1.7.tgz#887f8411e5e72278ddb7a22fc07f2d06fc0ccb26"
+  integrity sha512-aa2P9gsIB937DKdtiJ5a6I1Cw1Jg0DCk5U6h9sYApFUuUaLujGTtmFgCT/Ec3L6Z/dvca0e4xbHAPAEZltO93A==
+  dependencies:
+    "@babel/runtime" "^7.14.8"
+    "@toss/utils" "^1.4.1"
+    csstype "^3.0.9"
+
+"@toss/utils@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@toss/utils/-/utils-1.4.1.tgz#3311510d4ac45ab470f15e136c40906051be3965"
+  integrity sha512-xrgAtmJSTnGWeiFHxk8PgadCwUTUfw/o2ssWTKWZTxmim3Bt/DEdCTfpHFdLHUjonJgWfac6ua5F2+J872dWJg==
+  dependencies:
+    "@babel/runtime" "^7.14.8"
+    date-fns "^2.25.0"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
+
+"@types/material-colors@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/material-colors/-/material-colors-1.2.0.tgz#87c61818d571e0b51bdadeb04919069dd5ce8ab1"
+  integrity sha512-hJ8jwFPoiUsw+UO2a+hwnjNjeGbI+LisXPCOmEwaXsiVueYZ4qS++PvC0evP30p3Q9AysYEDc40btmxtO+q07A==
 
 "@types/node@18.15.11":
   version "18.15.11"
@@ -689,7 +711,7 @@ cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-csstype@^3.0.2:
+csstype@^3.0.2, csstype@^3.0.9:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
   integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
@@ -698,6 +720,11 @@ damerau-levenshtein@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
+
+date-fns@^2.25.0:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
+  integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
 debug@^3.2.7:
   version "3.2.7"
