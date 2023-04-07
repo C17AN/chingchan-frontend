@@ -1,10 +1,10 @@
 import { useSession, signIn, signOut, getProviders } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { SwitchCase } from "@toss/react";
-import { Provider } from "./auth/types/Provider";
+import { Provider } from "../../types/Provider";
 import { css } from "@emotion/react";
 import { Flex } from "@toss/emotion-utils";
-import Container from "@/components/common/Container";
+import Container from "@/components/common/ui/Container";
 
 export default function Component() {
   const { data: session } = useSession();
@@ -19,8 +19,6 @@ export default function Component() {
   useEffect(() => {
     fetchProvider();
   }, []);
-
-  console.log(Object.values(providerList));
 
   if (session) {
     return (

@@ -36,20 +36,16 @@ export const CTAButton = ({
   ...props
 }: PropsWithChildren<Props>) => {
   return (
-    <StyledButton
+    <Button
       onClick={onClick}
-      role="button"
-      tabIndex={0}
-      variants={buttonVariants}
-      whileTap="pressed"
-      {...props}
       css={css`
         width: 100%;
         margin-top: auto;
       `}
+      {...props}
     >
       {children}
-    </StyledButton>
+    </Button>
   );
 };
 

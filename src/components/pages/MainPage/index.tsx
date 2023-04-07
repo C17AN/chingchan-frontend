@@ -3,8 +3,6 @@ import Container from "@/components/common/ui/Container";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { Spacing } from "@toss/emotion-utils";
-import colors from "material-colors";
 import FirstSection from "./Section/FirstSection";
 import SecondSection from "./Section/SecondSection";
 

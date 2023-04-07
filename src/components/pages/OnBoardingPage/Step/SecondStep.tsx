@@ -4,8 +4,6 @@ import { Spacing } from "@toss/emotion-utils";
 import colors from "material-colors";
 import { CTAButton } from "@/components/common/ui/Button";
 
-type Props = {};
-
 const SecondStep = () => {
   return (
     <>
