@@ -1,5 +1,5 @@
-import Button from "@/components/common/Button";
-import Container from "@/components/common/Container";
+import Button from "@/components/common/ui/Button";
+import Container from "@/components/common/ui/Container";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
@@ -14,6 +14,7 @@ export default function Main() {
       <FirstSection />
       <SecondSection />
       <Button
+        onClick={() => {}}
         css={css`
           margin-top: auto;
           width: 100%;

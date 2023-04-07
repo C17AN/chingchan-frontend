@@ -1,4 +1,4 @@
-import Button from "@/components/common/Button";
+import Button from "@/components/common/ui/Button";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
