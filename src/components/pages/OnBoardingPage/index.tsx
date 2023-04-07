@@ -14,7 +14,7 @@ export const OnBoardingContext = createContext<{
   setStep: () => {},
 }).Provider;
 
-const onBoarding = () => {
+const OnBoardingPage = () => {
   const [step, setStep] = useState<FunnelStep>("정보입력");
 
   return (
@@ -28,4 +28,4 @@ const onBoarding = () => {
   );
 };
 
-export default onBoarding;
+export default OnBoardingPage;

@@ -1,13 +1,16 @@
 import React, { HTMLAttributes, PropsWithChildren } from "react";
 import { SwitchCase } from "@toss/react";
 import { css } from "@emotion/react";
+import colors from "material-colors";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   typography?: "h1" | "h2" | "h3" | "p" | "small";
   color?: string;
 }
 
-const baseTextStyle = css``;
+const baseTextStyle = css`
+  color: ${colors.grey[900]};
+`;
 
 const h1Style = css`
   ${baseTextStyle}
