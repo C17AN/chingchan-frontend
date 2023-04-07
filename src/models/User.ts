@@ -1,5 +1,5 @@
 export type User = {
   name: string;
-  birthDate: Date;
+  birthDate: Date | null;
   partner: User;
 };

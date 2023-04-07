@@ -16,6 +16,7 @@ export const authOptions = {
   ],
   pages: {
     signIn: "/auth/signIn",
+    newUser: "/onBoarding",
   },
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {

@@ -3,10 +3,14 @@ import React from "react";
 import { Spacing } from "@toss/emotion-utils";
 import colors from "material-colors";
 import { CTAButton } from "@/components/common/ui/Button";
+import { useRouter } from "next/router";
 
-type Props = {};
+type Props = {
+  처음으로: () => void;
+};
 
-const ThirdStep = () => {
+const ThirdStep = ({ 처음으로 }: Props) => {
+  const router = useRouter();
   return (
     <>
       <Text typography="h1">이제 칭찬할 시간이에요!</Text>
@@ -16,7 +20,14 @@ const ThirdStep = () => {
         <br />
         QR 인증을 통해 등록해주세요.
       </Text>
-      <CTAButton onClick={() => {}}>다음으로</CTAButton>
+      <CTAButton
+        onClick={() => {
+          처음으로();
+          // router.push("/");
+        }}
+      >
+        칭찬 시작하기
+      </CTAButton>
     </>
   );
 };

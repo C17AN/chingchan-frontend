@@ -1,10 +1,12 @@
 import { useSession, signIn, signOut, getProviders } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { SwitchCase } from "@toss/react";
-import { Provider } from "../../types/Provider";
+import { Provider } from "@/types/Provider";
 import { css } from "@emotion/react";
 import { Flex } from "@toss/emotion-utils";
 import Container from "@/components/common/ui/Container";
+import Text from "@/components/common/ui/Text";
+import Button from "@/components/common/ui/Button";
 
 export default function Component() {
   const { data: session } = useSession();
@@ -30,7 +32,7 @@ export default function Component() {
   }
   return (
     <Container>
-      <div>오늘부터 시작하는 너와 나의 칭찬</div>
+      <Text typography="h1">오늘부터 시작하는 너와 나의 칭찬</Text>
       <div
         css={css`
           margin-top: auto;
@@ -61,14 +63,30 @@ const LoginButton = ({ provider, name }: { provider: any; name: string }) => {
       value={name}
       caseBy={{
         Google: (
-          <button onClick={() => signIn(provider.id)} css={css``}>
+          <Button
+            onClick={() => signIn(provider.id)}
+            css={css`
+              border-radius: 12px;
+            `}
+          >
             구글 계정으로 로그인
-          </button>
+          </Button>
         ),
         Kakao: (
-          <button onClick={() => signIn(provider.id)} css={css``}>
+          <Button
+            onClick={() => signIn(provider.id)}
+            css={css`
+              background-color: #fee500;
+              color: #00000085;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+                sans-serif;
+              font-weight: 500;
+              border-radius: 12px;
+            `}
+          >
             카카오톡으로 로그인
-          </button>
+          </Button>
         ),
       }}
     />

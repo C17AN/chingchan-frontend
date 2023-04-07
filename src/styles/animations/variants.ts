@@ -5,6 +5,10 @@ export const variants: Variants = {
     opacity: 0,
     x: "-100%",
   },
+  FadeIn: {
+    opacity: 1,
+    y: 0,
+  },
   hidden: {
     opacity: 0,
     y: 10,

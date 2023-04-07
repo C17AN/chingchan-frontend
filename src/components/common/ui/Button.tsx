@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import colors from "material-colors";
 import { css } from "@emotion/react";
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
+interface Props {
   onClick: () => void;
   css?: any;
 }
@@ -24,8 +24,9 @@ const Button = ({ children, onClick, ...props }: PropsWithChildren<Props>) => {
       tabIndex={0}
       variants={buttonVariants}
       whileTap="pressed"
+      {...props}
     >
-      <div {...props}>{children}</div>
+      <div>{children}</div>
     </StyledButton>
   );
 };

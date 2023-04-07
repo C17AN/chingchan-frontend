@@ -4,7 +4,11 @@ import { Spacing } from "@toss/emotion-utils";
 import colors from "material-colors";
 import { CTAButton } from "@/components/common/ui/Button";
 
-const SecondStep = () => {
+type Props = {
+  완료: () => void;
+};
+
+const SecondStep = ({ 완료 }: Props) => {
   return (
     <>
       <Text typography="h1">칭찬 파트너 찾기</Text>
@@ -14,7 +18,7 @@ const SecondStep = () => {
         <br />
         QR 인증을 통해 등록해주세요.
       </Text>
-      <CTAButton onClick={() => {}}>다음으로</CTAButton>
+      <CTAButton onClick={완료}>다음으로</CTAButton>
     </>
   );
 };
