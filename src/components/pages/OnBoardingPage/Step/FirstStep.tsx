@@ -12,8 +12,6 @@ type Props = {
 const FirstStep = ({ 파트너입력이동 }: Props) => {
   const { register, watch } = useFormContext();
 
-  console.log(watch());
-
   return (
     <>
       <Text typography="h1">내 정보 입력하기</Text>
@@ -33,7 +31,6 @@ const FirstStep = ({ 파트너입력이동 }: Props) => {
         {...register("name")}
         placeholder="yyyy-MM-DD 형식으로 입력해주세요"
       />
-      <CTAButton onClick={파트너입력이동}>다음으로</CTAButton>
     </>
   );
 };

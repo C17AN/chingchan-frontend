@@ -3,6 +3,7 @@ import React from "react";
 import { Spacing } from "@toss/emotion-utils";
 import colors from "material-colors";
 import { CTAButton } from "@/components/common/ui/Button";
+import { Input } from "@/components/common/ui/Input";
 
 type Props = {
   완료: () => void;
@@ -18,7 +19,8 @@ const SecondStep = ({ 완료 }: Props) => {
         <br />
         QR 인증을 통해 등록해주세요.
       </Text>
-      <CTAButton onClick={완료}>다음으로</CTAButton>
+      <Spacing size={20} />
+      <Input label="아이디" />
     </>
   );
 };

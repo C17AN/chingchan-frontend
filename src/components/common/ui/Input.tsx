@@ -54,6 +54,6 @@ const StyledInput = styled(motion.input)`
 
   &:focus {
     outline: none;
-    border-bottom: 1px solid ${colors.grey[700]};
+    border-bottom: 1px solid ${colors.grey[500]};
   }
 `;
