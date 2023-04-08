@@ -13,9 +13,11 @@ export default function Main() {
   return (
     <Container>
       <FirstSection />
-      {/* <SecondSection /> */}
+      <SecondSection />
       <Button
-        onClick={() => {}}
+        onClick={() => {
+          setPraiseModalOpen(() => true);
+        }}
         css={css`
           margin-top: auto;
           width: 100%;

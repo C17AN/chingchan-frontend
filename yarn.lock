@@ -465,6 +465,13 @@
     "@tanstack/query-core" "4.27.0"
     use-sync-external-store "^1.2.0"
 
+"@toss/date@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@toss/date/-/date-1.1.6.tgz#ca419048f5f94a0368b9ea91bda346405b8e3de9"
+  integrity sha512-fneJRk/TS2j9OOZ7ephDuyZyP95EiRg32UHd42UxN2ytSjwVh+UikGSVwzyVcT9XEKyhRt8tafmdoGH4XP/iZw==
+  dependencies:
+    date-fns "^2.25.0"
+
 "@toss/emotion-utils@^1.1.7":
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/@toss/emotion-utils/-/emotion-utils-1.1.7.tgz#887f8411e5e72278ddb7a22fc07f2d06fc0ccb26"

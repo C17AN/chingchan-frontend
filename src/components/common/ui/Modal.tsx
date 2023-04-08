@@ -90,7 +90,6 @@ const ModalTitle = styled.h3`
   font-size: 1.2rem;
   color: ${colors.grey[900]};
   font-weight: 700;
-  margin-bottom: 12px;
 `;
 
 export default Modal;

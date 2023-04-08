@@ -6,6 +6,7 @@ import { css } from "@emotion/react";
 
 interface Props {
   onClick: () => void;
+  size?: "small" | "medium" | "large";
   css?: any;
 }
 
@@ -16,7 +17,12 @@ const buttonVariants: Variants = {
   },
 };
 
-const Button = ({ children, onClick, ...props }: PropsWithChildren<Props>) => {
+const Button = ({
+  children,
+  onClick,
+  size = "medium",
+  ...props
+}: PropsWithChildren<Props>) => {
   return (
     <StyledButton
       onClick={onClick}
@@ -24,6 +30,7 @@ const Button = ({ children, onClick, ...props }: PropsWithChildren<Props>) => {
       tabIndex={0}
       variants={buttonVariants}
       whileTap="pressed"
+      size={size}
       {...props}
     >
       <div>{children}</div>
@@ -50,10 +57,20 @@ export const CTAButton = ({
   );
 };
 
-const StyledButton = styled(motion.button)`
+const StyledButton = styled(motion.button)<{
+  size: "small" | "medium" | "large";
+}>`
   background-color: ${colors.blue[200]};
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: ${({ size }) => `
+    ${
+      size === "small"
+        ? "8px 12px"
+        : size === "medium"
+        ? "12px 16px"
+        : "16px 24px"
+    }
+  `};
   font-size: 1rem;
   color: ${colors.white};
   font-weight: 700;
