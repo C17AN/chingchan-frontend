@@ -9,10 +9,8 @@ export const DefaultLayout = ({ children }: { children: ReactNode }) => {
 export const ProtectedLayout = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
   const session = useSession();
-
-  console.log(session);
-
-  useEffect(() => {}, []);
-
-  return <div>{children}</div>;
+  if (session.status === "unauthenticated") {
+    router.replace("/auth");
+    return null;
+  } else return <div>{children}</div>;
 };

@@ -1,11 +1,12 @@
 import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
 import { AnimatePresence } from "framer-motion";
-import "../styles/global.css";
-import "../styles/reset.css";
 import Head from "next/head";
 import { DefaultLayout, ProtectedLayout } from "@/components/layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Session } from "next-auth";
+import "../styles/global.css";
+import "../styles/reset.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {},
@@ -16,7 +17,7 @@ type AppPropsWithSession = AppProps & {
     requireAuth: boolean;
   };
   pageProps: {
-    session: any;
+    session: Session;
   };
 };
 
@@ -24,6 +25,7 @@ export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppPropsWithSession) {
+  console.log(session);
   return (
     <>
       <Head>
@@ -35,17 +37,15 @@ export default function App({
       <SessionProvider session={session}>
         <QueryClientProvider client={queryClient}>
           <AnimatePresence>
-            <DefaultLayout>
-              {Component.requireAuth && !session ? (
-                <ProtectedLayout>
-                  <Component {...pageProps} />
-                </ProtectedLayout>
-              ) : (
-                <DefaultLayout>
-                  <Component {...pageProps} />
-                </DefaultLayout>
-              )}
-            </DefaultLayout>
+            {Component.requireAuth && !session ? (
+              <ProtectedLayout>
+                <Component {...pageProps} />
+              </ProtectedLayout>
+            ) : (
+              <DefaultLayout>
+                <Component {...pageProps} />
+              </DefaultLayout>
+            )}
           </AnimatePresence>
         </QueryClientProvider>
       </SessionProvider>

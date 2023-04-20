@@ -11,7 +11,6 @@ import Button from "@/components/common/ui/Button";
 export default function Component() {
   const { data: session } = useSession();
   const [providerList, setProviderList] = useState<Provider>({});
-  // const {} = useQuery('');
 
   const fetchProvider = async () => {
     const providerList = await getProviders();
@@ -51,6 +50,7 @@ export default function Component() {
               name={provider.name}
             />
           ))}
+          <Button onClick={() => {}}>아직 회원이 아니신가요? 회원가입</Button>
         </Flex>
       </div>
     </Container>

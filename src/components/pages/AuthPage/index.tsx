@@ -1,9 +1,7 @@
 import Container from "@/components/common/ui/Container";
 import FirstStep from "./Step/FirstStep";
 
-type Props = {};
-
-const AuthPage = (props: Props) => {
+const AuthPage = () => {
   return (
     <Container>
       <FirstStep />

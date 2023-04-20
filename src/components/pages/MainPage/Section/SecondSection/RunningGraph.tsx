@@ -1,4 +1,5 @@
 import Text from "@/components/common/ui/Text";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import colors from "material-colors";
 import React from "react";
@@ -11,8 +12,15 @@ type Props = {
 const RunningGraph = ({ targetPraiseCount, currentPraiseCount }: Props) => {
   return (
     <Container className="running-status-graph">
-      <PraiseCountText>{targetPraiseCount}</PraiseCountText>
-      <PraiseCountText>{currentPraiseCount}</PraiseCountText>
+      <PraiseCountText>{0}</PraiseCountText>
+      <PraiseProgress />
+      <PraiseCountText
+        css={css`
+          right: 0;
+        `}
+      >
+        {targetPraiseCount}
+      </PraiseCountText>
     </Container>
   );
 };
@@ -26,6 +34,12 @@ const Container = styled.div`
   border-radius: 30px;
 `;
 
-const PraiseCountText = styled(Text)``;
+const PraiseProgress = styled.div``;
+
+const PraiseCountText = styled(Text)`
+  position: absolute;
+  font-size: 0.625rem;
+  bottom: -18px;
+`;
 
 export default RunningGraph;

@@ -25,6 +25,7 @@ const SecondSection = (props: Props) => {
         <Text>남은 칭찬 점수 : 20번</Text>
         <Spacing size={8} />
         <RunningGraph targetPraiseCount={20} currentPraiseCount={10} />
+        <Spacing size={20} />
       </RunningStatus>
     </div>
   );
