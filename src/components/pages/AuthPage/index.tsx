@@ -3,9 +3,9 @@ import FirstStep from "./Step/FirstStep";
 
 const AuthPage = () => {
   return (
-    <Container>
+    <div>
       <FirstStep />
-    </Container>
+    </div>
   );
 };
 

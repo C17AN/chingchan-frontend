@@ -8,7 +8,7 @@ import Container from "@/components/common/ui/Container";
 import Text from "@/components/common/ui/Text";
 import Button from "@/components/common/ui/Button";
 
-export default function Component() {
+export default function FirstStep() {
   const { data: session } = useSession();
   const [providerList, setProviderList] = useState<Provider>({});
 
@@ -29,9 +29,14 @@ export default function Component() {
       </>
     );
   }
+
   return (
     <Container>
-      <Text typography="h1">오늘부터 시작하는 너와 나의 칭찬</Text>
+      <Text typography="h1">
+        오늘부터 시작하는
+        <br />
+        너와 나의 칭찬
+      </Text>
       <div
         css={css`
           margin-top: auto;
